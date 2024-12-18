@@ -2,17 +2,20 @@
 <html>
 <body>
 
-<h2>Formulários HTML</h2>
+<h2>Restrições de Campo de Data</h2>
+<p>Use os atributos min e max para adicionar restrições às datas:</p>
 
 <form action="/action_page.php">
-  <label for="fname">Primeiro nome:</label><br>
-  <input type="text" id="fname" name="fname" value="Ariangelo"><br>
-  <label for="lname">Sobrenome:</label><br>
-  <input type="text" id="lname" name="lname" value="Hauer Dias"><br><br>
-  <input type="submit" value="Confirmar">
+  <label for="datemin">Insira uma data após 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+  <label for="datemax">Insira uma data antes de 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+  <input type="submit" value="Enviar">
 </form> 
 
-<p>Se você clicar no botão "Confirmar", os dados do formulário serão enviados para uma página chamada "/action_page.php".</p>
+<p><strong>Nota:</strong> o tipo "date" não é suportado no Internet Explorer 11.</p>
 
 </body>
 </html>
